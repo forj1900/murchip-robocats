@@ -39,6 +39,6 @@ const formNote = document.getElementById('formNote');
 
 orderForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  formNote.textContent = 'Спасибо! Мы напишем вам, как только МурChip будет готов к отправке 🐾';
+  formNote.textContent = 'Заявка принята! Проверяем вашу посадочную площадку и свободное окно Starlink V7 🚀';
   orderForm.reset();
 });
