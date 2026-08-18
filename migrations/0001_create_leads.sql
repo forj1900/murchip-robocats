@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS leads (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT NOT NULL COLLATE NOCASE UNIQUE,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  last_submitted_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  submission_count INTEGER NOT NULL DEFAULT 1,
+  status TEXT NOT NULL DEFAULT 'new',
+  source TEXT NOT NULL DEFAULT 'website'
+);
+
+CREATE INDEX IF NOT EXISTS leads_status_created_at_idx
+  ON leads (status, created_at DESC);

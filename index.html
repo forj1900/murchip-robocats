@@ -310,10 +310,14 @@
       <h2>Готовы потратить $1 000 000 с пользой?</h2>
       <p>Цена одинакова для всех моделей. Доставка на Землю и Марс бесплатная, посадочная площадка — ваша.</p>
       <form class="cta-form" id="orderForm">
-        <input type="email" placeholder="Ваш email" required aria-label="Email">
+        <input type="email" name="email" placeholder="Ваш email" required maxlength="254" autocomplete="email" aria-label="Электронная почта">
+        <label class="form-honeypot" aria-hidden="true">
+          Компания
+          <input type="text" name="company" tabindex="-1" autocomplete="off">
+        </label>
         <button type="submit" class="btn btn-primary btn-lg">Оставить заявку</button>
       </form>
-      <p class="cta-note" id="formNote">Никакого спама — только координаты посадки и отчёты о переселённых мышах.</p>
+      <p class="cta-note" id="formNote" role="status" aria-live="polite">Никакого спама — только координаты посадки и отчёты о переселённых мышах.</p>
     </div>
   </section>
 

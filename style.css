@@ -470,7 +470,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 0.98rem;
 }
 .cta-form input:focus { outline: 3px solid var(--accent); }
+.cta-form button:disabled { opacity: 0.65; cursor: wait; transform: none; }
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .cta-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 16px; position: relative; }
+.cta-note.is-success { color: #86efac; }
+.cta-note.is-error { color: #fca5a5; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); padding: 36px 24px; }
