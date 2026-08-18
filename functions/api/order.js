@@ -18,6 +18,20 @@ function isValidEmail(email) {
   return email.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+export async function onRequestGet({ env }) {
+  if (!env.LEADS_DB) {
+    return json({ ok: false, error: "База заявок не подключена." }, 503);
+  }
+
+  try {
+    await env.LEADS_DB.prepare("SELECT 1 AS ok").first();
+    return json({ ok: true });
+  } catch (error) {
+    console.error("Lead database health check failed", error);
+    return json({ ok: false, error: "База заявок недоступна." }, 503);
+  }
+}
+
 export async function onRequestPost({ request, env }) {
   if (!env.LEADS_DB) {
     return json({ ok: false, error: "Форма временно недоступна." }, 503);
