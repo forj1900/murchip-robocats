@@ -48,6 +48,11 @@ jobs:
       - name: Apply database migrations
         run: npx --yes wrangler@4.124.0 d1 migrations apply LEADS_DB --remote
 
+      - name: Verify stored applications
+        run: >
+          npx --yes wrangler@4.124.0 d1 execute LEADS_DB --remote --json
+          --command "SELECT COUNT(*) AS lead_count, MAX(last_submitted_at) AS latest_submission FROM leads;"
+
       - name: Deploy the current commit to Cloudflare Pages
         shell: bash
         run: |
