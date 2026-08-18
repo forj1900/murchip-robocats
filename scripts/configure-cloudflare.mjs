@@ -16,7 +16,7 @@ const config = {
   $schema: "./node_modules/wrangler/config-schema.json",
   name: "murchip-robocats",
   pages_build_output_dir: "./public",
-  compatibility_date: "2026-08-19",
+  compatibility_date: "2026-08-18",
   d1_databases: [
     {
       binding: "LEADS_DB",
