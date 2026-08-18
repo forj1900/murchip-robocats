@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МурChip — робокот, который дружит с собаками</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-icon">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 6 L12 13 L22 13 L26 6" stroke="#1c1730" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="7" y="12" width="20" height="16" rx="8" fill="#FF7A5C"/>
+          <circle cx="13" cy="20" r="2.4" fill="#1c1730"/>
+          <circle cx="21" cy="20" r="2.4" fill="#1c1730"/>
+        </svg>
+      </span>
+      МурChip
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#features">Возможности</a>
+      <a href="#friends">Дружба с собаками</a>
+      <a href="#guard">Охрана дома</a>
+      <a href="#models">Модели</a>
+      <a href="#reviews">Отзывы</a>
+    </nav>
+    <a href="#order" class="btn btn-primary btn-header">Заказать кота</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#features">Возможности</a>
+    <a href="#friends">Дружба с собаками</a>
+    <a href="#guard">Охрана дома</a>
+    <a href="#models">Модели</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#order" class="btn btn-primary">Заказать кота</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-text">
+      <span class="eyebrow">🐾 Новое поколение домашних роботов</span>
+      <h1>Робот-кот,<br> который <span class="highlight">любит собак</span><br> и охраняет ваш дом</h1>
+      <p class="hero-sub">
+        МурChip — компаньон на батарейках с живым характером кота: он ластится, мурчит, дружит с вашей собакой
+        и без устали патрулирует квартиру в поисках мышей и насекомых. Ни шерсти, ни лотка — только забота.
+      </p>
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-primary btn-lg">Выбрать своего МурChip</a>
+        <a href="#video" class="btn btn-ghost btn-lg">
+          <span class="play-dot">▶</span> Смотреть демо
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12 000+</strong><span>котов дома у людей</span></div>
+        <div><strong>98%</strong><span>собак признают своим</span></div>
+        <div><strong>0</strong><span>пойманных, но живых мышей — все выпроважены на улицу</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-card">
+        <svg viewBox="0 0 420 420" class="cat-hero" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="210" cy="330" rx="140" ry="20" fill="#1c1730" opacity="0.08"/>
+          <!-- tail -->
+          <path d="M320 260 C 380 240, 390 180, 350 150" stroke="#FF7A5C" stroke-width="18" stroke-linecap="round" fill="none"/>
+          <!-- body -->
+          <rect x="110" y="180" width="200" height="140" rx="60" fill="#FF8C6B"/>
+          <!-- chest panel -->
+          <rect x="170" y="220" width="80" height="70" rx="18" fill="#FFF4EE"/>
+          <circle cx="210" cy="255" r="18" fill="#4ADE80" class="pulse"/>
+          <path d="M203 255 l5 6 l10 -14" stroke="#0b3d1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- legs -->
+          <rect x="130" y="300" width="26" height="46" rx="13" fill="#FF7A5C"/>
+          <rect x="264" y="300" width="26" height="46" rx="13" fill="#FF7A5C"/>
+          <!-- head -->
+          <g class="head-bob">
+            <path d="M150 130 L165 90 L195 128 Z" fill="#FF7A5C"/>
+            <path d="M270 130 L255 90 L225 128 Z" fill="#FF7A5C"/>
+            <circle cx="210" cy="160" r="72" fill="#FFA084"/>
+            <circle cx="182" cy="155" r="12" fill="#1c1730"/>
+            <circle cx="238" cy="155" r="12" fill="#1c1730"/>
+            <circle cx="186" cy="151" r="3.5" fill="#fff"/>
+            <circle cx="242" cy="151" r="3.5" fill="#fff"/>
+            <path d="M202 178 q8 8 16 0" stroke="#1c1730" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M150 172 l-30 -6 M150 180 l-30 4 M270 172 l30 -6 M270 180 l30 4" stroke="#1c1730" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="210" cy="96" r="4" fill="#FF3B3B" class="pulse"/>
+            <line x1="210" y1="96" x2="210" y2="112" stroke="#1c1730" stroke-width="2.5"/>
+          </g>
+        </svg>
+        <div class="floating-chip chip-mouse">🐭 обнаружено движение</div>
+        <div class="floating-chip chip-dog">🐶 друг рядом</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS / TRUST -->
+  <section class="trust container">
+    <p>МурChip рекомендуют</p>
+    <div class="trust-row">
+      <span>ПетТех Журнал</span>
+      <span>Дом&nbsp;Умный</span>
+      <span>ВетСовет</span>
+      <span>Robo&nbsp;Review</span>
+      <span>Квартира&nbsp;2030</span>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features container">
+    <div class="section-head">
+      <span class="eyebrow">Что умеет</span>
+      <h2>Характер кота, дисциплина робота</h2>
+      <p>Три главных таланта МурChip — то, ради чего его берут домой.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card card-friend">
+        <div class="feature-icon">🐕‍🦺</div>
+        <h3>Дружит с живыми собаками</h3>
+        <p>Датчики социального поведения считывают язык тела собаки: МурChip не шипит и не убегает, а играет,
+          подстраивается под темп прогулки по квартире и делит миски без конфликтов.</p>
+      </article>
+
+      <article class="feature-card card-guard" id="guard">
+        <div class="feature-icon">🛡️</div>
+        <h3>Охраняет от мышей</h3>
+        <p>Ультразвуковые усы-антенны обнаруживают грызунов за стенами и под полом. МурChip патрулирует
+          периметр ночью и мягко отпугивает мышей звуком, недоступным человеческому уху.</p>
+      </article>
+
+      <article class="feature-card card-insects">
+        <div class="feature-icon">🦟</div>
+        <h3>Ловит насекомых</h3>
+        <p>Термокамера в носу засекает тепловой след комаров и тараканов. Липкая лапка-ловушка убирает
+          незваных гостей без химии и без вреда для домашних животных.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FRIENDS WITH DOGS -->
+  <section id="friends" class="split container">
+    <div class="split-art">
+      <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="friends-illustration">
+        <ellipse cx="240" cy="330" rx="200" ry="18" fill="#1c1730" opacity="0.06"/>
+        <!-- dog -->
+        <g>
+          <ellipse cx="330" cy="260" rx="90" ry="55" fill="#D9A066"/>
+          <circle cx="410" cy="220" r="55" fill="#E3B380"/>
+          <ellipse cx="392" cy="188" rx="16" ry="24" fill="#D9A066" transform="rotate(-25 392 188)"/>
+          <ellipse cx="432" cy="188" rx="16" ry="24" fill="#D9A066" transform="rotate(25 432 188)"/>
+          <circle cx="398" cy="216" r="6" fill="#3a2415"/>
+          <circle cx="424" cy="216" r="6" fill="#3a2415"/>
+          <ellipse cx="411" cy="236" rx="10" ry="7" fill="#3a2415"/>
+          <path d="M330 305 q80 40 150 0" stroke="#3a2415" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.4"/>
+          <path d="M250 250 q-40 -10 -55 20" stroke="#D9A066" stroke-width="16" stroke-linecap="round" fill="none" class="tail-wag"/>
+        </g>
+        <!-- robocat -->
+        <g transform="translate(40,140)">
+          <rect x="0" y="60" width="140" height="95" rx="42" fill="#FF8C6B"/>
+          <rect x="40" y="90" width="60" height="50" rx="14" fill="#FFF4EE"/>
+          <circle cx="70" cy="115" r="12" fill="#4ADE80" class="pulse"/>
+          <circle cx="70" cy="45" r="50" fill="#FFA084"/>
+          <path d="M35 15 L48 -18 L70 14 Z" fill="#FF7A5C"/>
+          <path d="M105 15 L92 -18 L70 14 Z" fill="#FF7A5C"/>
+          <circle cx="52" cy="42" r="8" fill="#1c1730"/>
+          <circle cx="88" cy="42" r="8" fill="#1c1730"/>
+          <path d="M58 62 q12 10 24 0" stroke="#1c1730" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+        <path d="M150 210 C 200 170, 240 170, 270 200" stroke="#FF3B7F" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+        <text x="195" y="165" font-size="26">💛</text>
+      </svg>
+    </div>
+    <div class="split-text">
+      <span class="eyebrow">Совместимость с собаками</span>
+      <h2>Ваша собака получит нового лучшего друга</h2>
+      <p>Большинство роботов-питомцев игнорируют других животных. МурChip — нет. Встроенный «социальный
+        протокол» распознаёт приглашение к игре, стойку доминирования и усталость собаки, отвечая тем же
+        языком, что и живой кот — но без единой царапины.</p>
+      <ul class="check-list">
+        <li>Общий словарь жестов для собак и кошек</li>
+        <li>Мягкий корпус без острых углов и когтей</li>
+        <li>Режим «тихий час», когда собака отдыхает</li>
+        <li>Совместные игровые сценарии — догонялки, прятки</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how container">
+    <div class="section-head">
+      <span class="eyebrow">Как это работает</span>
+      <h2>Три системы в одном пушистом корпусе</h2>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h4>Сенсорные усы</h4>
+        <p>Улавливают вибрации и ультразвук грызунов в радиусе 12 метров, даже за стенами.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h4>Термокамера в носу</h4>
+        <p>Отличает тепловой след насекомого от домашнего питомца и человека — ошибок не бывает.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h4>Модуль дружелюбия</h4>
+        <p>Считывает язык тела собаки 40 раз в секунду и подбирает бесконфликтную реакцию.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <h4>Ночной патруль</h4>
+        <p>Пока вы спите, МурChip обходит квартиру и присылает отчёт в приложение утром.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELS -->
+  <section id="models" class="models container">
+    <div class="section-head">
+      <span class="eyebrow">Модели</span>
+      <h2>Выберите характер своего МурChip</h2>
+    </div>
+    <div class="models-grid">
+      <article class="model-card">
+        <div class="model-badge">Бестселлер</div>
+        <div class="model-avatar" style="--c:#FF8C6B">🐱</div>
+        <h3>МурChip Guard</h3>
+        <p>Усиленные усы-антенны и увеличенный радиус патруля. Для частных домов и первых этажей.</p>
+        <div class="model-price">от 34 900 ₽</div>
+        <a href="#order" class="btn btn-outline">Подробнее</a>
+      </article>
+      <article class="model-card">
+        <div class="model-avatar" style="--c:#7C8CFF">🐈</div>
+        <h3>МурChip Buddy</h3>
+        <p>Оптимизирован для дружбы с собаками любого размера — от чихуахуа до лабрадора.</p>
+        <div class="model-price">от 29 900 ₽</div>
+        <a href="#order" class="btn btn-outline">Подробнее</a>
+      </article>
+      <article class="model-card">
+        <div class="model-avatar" style="--c:#4ADE80">🐾</div>
+        <h3>МурChip Mini</h3>
+        <p>Компактная версия для квартир-студий с базовой защитой от насекомых.</p>
+        <div class="model-price">от 19 900 ₽</div>
+        <a href="#order" class="btn btn-outline">Подробнее</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews container">
+    <div class="section-head">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят хозяева</h2>
+    </div>
+    <div class="reviews-grid">
+      <blockquote class="review-card">
+        <p>«Наш лабрадор Барс сначала не поверил, а через день они уже вместе гоняли фантик от конфеты.
+          Мышей в доме больше не видели.»</p>
+        <footer>— Анна, Москва, хозяйка Барса и МурChip Buddy</footer>
+      </blockquote>
+      <blockquote class="review-card">
+        <p>«Живём на первом этаже старого дома — мыши были каждую осень. С Guard-моделью забыли, что это такое.»</p>
+        <footer>— Игорь, Казань, МурChip Guard</footer>
+      </blockquote>
+      <blockquote class="review-card">
+        <p>«Комаров в квартире стало в разы меньше уже за первую неделю. И да, кот действительно мурчит, когда его гладишь.»</p>
+        <footer>— Светлана, Сочи, МурChip Mini</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="order" class="cta container">
+    <div class="cta-box">
+      <h2>Готовы познакомить дом с МурChip?</h2>
+      <p>Бесплатная доставка и 30 дней на тест-драйв дружбы с вашей собакой.</p>
+      <form class="cta-form" id="orderForm">
+        <input type="email" placeholder="Ваш email" required aria-label="Email">
+        <button type="submit" class="btn btn-primary btn-lg">Оставить заявку</button>
+      </form>
+      <p class="cta-note" id="formNote">Никакого спама — только апдейты о доставке.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="12" width="20" height="16" rx="8" fill="#FF7A5C"/>
+          <circle cx="13" cy="20" r="2.4" fill="#1c1730"/>
+          <circle cx="21" cy="20" r="2.4" fill="#1c1730"/>
+        </svg>
+      </span>
+      МурChip
+    </div>
+    <nav class="footer-nav">
+      <a href="#features">Возможности</a>
+      <a href="#friends">Дружба с собаками</a>
+      <a href="#guard">Охрана дома</a>
+      <a href="#models">Модели</a>
+      <a href="#reviews">Отзывы</a>
+    </nav>
+    <p class="footer-copy">© 2026 МурChip. Дизайн-концепт сайта.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
